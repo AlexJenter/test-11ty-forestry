@@ -1,0 +1,56 @@
+@mixin flexgrid($gutter: 0, $gap: 0, $defaultsize: auto) {
+	display: flex;
+	flex-wrap: wrap;
+	page-break-inside: avoid;
+	margin-right: -$gutter;
+	margin-top: -$gap;
+
+	> * {
+		float: left; // minimal fallback
+		flex: 0 0 auto;
+
+		@if $defaultsize != auto {
+			@include flexgridsize($defaultsize);
+		}
+
+		margin-top: $gap;
+		padding-right: $gutter;
+	}
+
+	&:after {
+		content: '';
+		display: table;
+		clear: both;
+		width: 100%;
+		flex: 0 0 auto;
+	}
+}
+@mixin flexgridsize($size: 1) {
+	width: 100% * $size;
+	width: calc(100% / #{1 / $size}); // stylelint-disable-line
+}
+
+@mixin flexgrid-gutter($gutter) {
+	margin-right: -$gutter;
+
+	> * {
+		padding-right: $gutter;
+	}
+}
+@mixin flexgrid-gap($gap) {
+	margin-top: -$gap;
+
+	> * {
+		margin-top: $gap;
+	}
+}
+
+@mixin flexgrid-center {
+	justify-content: center;
+}
+@mixin flexgrid-left {
+	justify-content: flex-start;
+}
+@mixin flexgrid-right {
+	justify-content: flex-end;
+}

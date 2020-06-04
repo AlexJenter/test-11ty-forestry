@@ -1,0 +1,122 @@
+---
+title: Steady Grid
+hide_from_index: true
+---
+
+
+- example 'Standard Grid' do
+
+	- example :desc do
+		%p
+			The Grid consists of children that are separated by a gap (gutter: 20px) and have a <strong>steady / uniform</strong> width.
+
+	- example 'Two columns' do
+		.l-SteadyGrid.l2
+			- (1..3).each do
+				.l-col
+					.styleguide-layout-sample 1/2
+
+	- example 'Three columns' do
+		.l-SteadyGrid.l3
+			- (1..5).each do
+				.l-col
+					.styleguide-layout-sample 1/3
+
+	- example 'Four columns' do
+		.l-SteadyGrid.l4
+			- (1..7).each do
+				.l-col
+					.styleguide-layout-sample 1/4
+
+
+
+
+- example 'Vertical space' do
+
+	- example 'None: noGap' do
+
+		.l-SteadyGrid.l2.noGap
+			- (1..3).each do
+				.l-col
+					.styleguide-layout-sample 1/2
+
+
+	- example 'Small: smallGap' do
+
+		.l-SteadyGrid.l2.smallGap
+			- (1..3).each do
+				.l-col
+					.styleguide-layout-sample 1/2
+
+
+	- example 'Large: largeGap' do
+
+		.l-SteadyGrid.l2.largeGap
+			- (1..3).each do
+				.l-col
+					.styleguide-layout-sample 1/2
+
+
+
+
+- example 'Small Gutter' do
+	- example :desc do
+		%p noGutter
+
+	.l-SteadyGrid.l3.smallGutter
+		- (1..7).each do
+			.l-col
+				.styleguide-layout-sample 1/4
+
+
+
+- example 'No Gutter' do
+	- example :desc do
+		%p noGutter
+
+	.l-SteadyGrid.l4.noGutter
+		- (1..7).each do
+			.l-col
+				.styleguide-layout-sample 1/4
+
+
+
+
+- example 'Alignment' do
+
+	- example :desc do
+		Only left alignment is possible.
+
+
+
+
+- example 'Understanding Device Breakpoints' do
+
+	- example :desc do
+
+		%ul
+			%li Empty = Desktop
+			%li tablet (Landscape)
+			%li tablet-portrait
+			%li mobile (Landscape)
+			%li mobile-portrait
+
+
+	.l-SteadyGrid.l4.l3-tablet.l2-mobile.l1-mobile-portrait
+		- (1..4).each do
+			.l-col
+				.styleguide-layout-sample
+					%div Dektop: 1/4
+					%div Tablet: 1/3
+					%div Mobile: 1/2
+					%div Mobile Portrait: 1/1
+
+
+
+
+- example 'Dynamic content' do
+	.l-SteadyGrid.l4
+		- (1..15).each do
+			.l-col
+				.styleguide-layout-sample= lorem.sentence
+

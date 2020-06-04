@@ -1,0 +1,15 @@
+@function px2percent($px, $contextSize) {
+	@return ($px / $contextSize) * 100%;
+}
+
+@function px2rem($px) {
+	@return ($px / 16px) * 1rem;
+}
+
+@mixin font-size($px) {
+	font-size: ($px);
+}
+
+@mixin line-height($px) {
+	line-height: ($px);
+}

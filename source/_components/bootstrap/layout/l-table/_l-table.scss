@@ -1,0 +1,112 @@
+.l-Table {
+	display: table;
+	width: 100%;
+
+	&.even {
+		// to make sure we have cells with equal width, each cell needs to have
+		// the same padding and border which is why we need to increase the width
+		// by the gutter size
+		width: calc(100% + #{$gutter});
+		table-layout: fixed;
+
+		> * {
+			width: 1%;
+		}
+	}
+
+	&:not(.even) {
+		> *:last-child {
+			border-right: 0;
+		}
+	}
+
+	&.align-top {
+		> * {
+			vertical-align: top;
+		}
+	}
+
+	&.align-bottom {
+		> * {
+			vertical-align: bottom;
+		}
+	}
+
+	&.no-gutter {
+		width: 100%;
+
+		> * {
+			border-right: 0;
+		}
+	}
+
+	&.no-gap {
+		> * {
+			margin-bottom: 0;
+		}
+	}
+
+	> * {
+		display: table-cell;
+		vertical-align: middle;
+		box-sizing: content-box;
+		border-right: $gutter solid transparent;
+		margin-bottom: $gutter;
+
+		&.align-left {
+			text-align: left;
+		}
+
+		&.align-center {
+			text-align: center;
+		}
+
+		&.align-right {
+			text-align: right;
+		}
+
+		&.min {
+			width: 1%;
+		}
+	}
+}
+
+@mixin lTableClasses($class) {
+	.l-Table.#{$class} {
+		display: block;
+		width: auto;
+
+		> * {
+			display: block;
+			width: auto;
+			text-align: left;
+			border-right: 0;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+
+		> *.min {
+			width: auto;
+		}
+	}
+}
+
+@include lTableClasses('reset');
+
+@include tablet {
+	@include lTableClasses('reset-tablet');
+}
+
+@include tablet-portrait {
+	@include lTableClasses('reset-tablet-portrait');
+}
+
+@include mobile {
+	@include lTableClasses('reset-mobile');
+}
+
+@include mobile-portrait {
+	@include lTableClasses('reset-mobile-portrait');
+}

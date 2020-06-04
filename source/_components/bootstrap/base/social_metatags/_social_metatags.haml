@@ -1,0 +1,39 @@
+- title ||= (data.config[:website_title] || 'Page Title')
+- description ||= data.config[:website_description] || '' # max 155
+- image ||= data.config[:website_image] # Make sure the image is at least 280px wide by 150px tall
+- host ||= data.config[:website_host]
+- twitter ||= data.config[:twitter] # twitter handle e.g. '@hvzh'
+
+%title= title
+%meta{:name => "description", :content => description}
+
+/ Open Graph data
+%meta{:property => "og:type", :content => "article"}
+%meta{:property => "og:title", :content => title}
+%meta{:property => "og:description", :content => description}
+- if host
+	%meta{:property => "og:url", :content => host}
+- if image
+	%meta{:property => "og:image", :content => "#{host}#{image}"}
+
+/ Schema.org markup for Google+
+%meta{:itemprop => "name", :content => title}
+%meta{:itemprop => "description", :content => description}
+- if image
+	%meta{:itemprop => "image", :content => "#{host}#{image}"}
+
+/ Twitter Card data
+
+-# summary, summary_large_image, photo, gallery, product, app, player cards
+%meta{:name => "twitter:card", :content => "summary"}
+%meta{:name => "twitter:title", :content => title}
+%meta{:name => "twitter:description", :content => description}
+- if image
+	%meta{:name => "twitter:image", :content => "#{host}#{image}"}
+- if twitter
+	%meta{:name => "twitter:site", :content => twitter}
+
+
+
+
+-# Read here: https://moz.com/blog/meta-data-templates-123

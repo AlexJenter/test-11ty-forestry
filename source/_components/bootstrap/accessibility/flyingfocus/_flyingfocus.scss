@@ -1,0 +1,45 @@
+/* stylelint-disable selector-no-id */
+
+#FlyingFocus {
+	position: absolute;
+	margin: 0;
+	top: -100px;
+	background: transparent;
+	transition-property: left, top, width, height, opacity;
+	transition-timing-function: cubic-bezier(0, 0.2, 0, 1);
+	visibility: hidden;
+	pointer-events: none;
+	display: none;
+}
+
+#FlyingFocus.FlyingFocus-visible {
+	visibility: visible;
+	z-index: 10000000;
+	display: block;
+}
+
+#FlyingFocus::after {
+	content: '';
+	position: absolute;
+	top: -9px;
+	left: -9px;
+	bottom: -9px;
+	right: -9px;
+	border-radius: 3px;
+	box-shadow: 0 0 54px 0px rgba(0, 0, 0, 0.2), 0 0 2px 2px rgba(0, 10, 20, 0.1);
+	border: 1px solid rgba(0, 10, 20, 0.5);
+}
+
+#FlyingFocus::before {
+	content: '';
+	position: absolute;
+	top: -8px;
+	left: -8px;
+	bottom: -8px;
+	right: -8px;
+	border-radius: 3px;
+	box-shadow: 0 0 2px rgba(255, 255, 255, 0.9) inset;
+	border: 1px solid rgba(255, 255, 255, 0.8);
+}
+
+/* stylelint-enable */

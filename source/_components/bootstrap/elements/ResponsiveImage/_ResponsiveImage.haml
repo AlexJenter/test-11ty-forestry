@@ -1,0 +1,27 @@
+- attr ||= {}
+- attr = attr.merge(cleanLocals(locals))
+- attr.delete(:attr)
+- source = (attr.delete(:source) or "myswitzerland/#{uid(:int)}")
+- tag = (attr.delete(:tag) or :img)
+- size = (attr.delete(:size) or '1000x600')
+- content = attr.delete(:content)
+- wrapper = (attr.delete(:wrapper) or {})
+
+
+:ruby
+	source = '//flximg.com/%wx%h/' + source
+	size = size.split('x').map {|v| v.to_i * 1.6}
+	sizes = responsive_sizes :size => size
+
+	responsive = responsive_sizes :size => size, :src => source
+	attr[:'data-sizes'] = responsive[:'data-sizes']
+
+.Image{wrapper.merge({:style => "background-image: url(#{responsive[:preview]}); padding-top: #{(size[1].to_f / size[0].to_f * 100).round(2)}%"})}
+	- if tag == :img
+		- attr[:alt] = '' unless attr.has_key?(:alt)
+		- attr[:src] = responsive[:preview]
+		%img{attr}
+	- else
+		- attr[:style] = (attr[:style] ? attr[:style] + ';' : '') + 'background-image: url(' + responsive[:preview] + ')'
+		= content_tag tag, attr do
+			= content

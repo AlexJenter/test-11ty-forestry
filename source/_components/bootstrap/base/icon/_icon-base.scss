@@ -1,0 +1,21 @@
+@mixin ico-block() {
+	display: inline-block;
+	vertical-align: middle;
+	text-indent: -9999px;
+	letter-spacing: -1ex;
+	text-decoration: none;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+@mixin icon {
+	box-sizing: border-box;
+	display: inline-block;
+	position: relative;
+	letter-spacing: -1ex;
+	text-indent: -9999px;
+	text-decoration: none;
+	line-height: 1;
+	border: none;
+	outline: none;
+}

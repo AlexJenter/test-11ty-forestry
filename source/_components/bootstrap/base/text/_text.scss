@@ -1,0 +1,11 @@
+.richtext {
+	@include richtext(most);
+}
+
+.t-nowrap {
+	@include nowrap;
+}
+
+.t-hyphenate {
+	@include hyphenate;
+}

@@ -1,0 +1,76 @@
+---
+title: Form Inputs
+---
+
+
+- example "Standard inputs" do
+
+
+	= form :boxedinput do
+		= input :text, :'label' => 'First name', :'placeholder' => 'Enter first name ...', :'autocomplete' => 'given-name'
+
+
+	= form :boxedinput do
+		= input :text, hiddenlabel: 'Middle name', placeholder: 'Enter middle name ...', autocomplete: 'additional-name'
+
+
+	= form :boxedinput do
+		= input :text, label: {text: 'Last name', 'class': 'formlabel', id: 'mylabel', for: 'myinput'}, placeholder: 'Enter last name ...', autocomplete: 'family-name', id: 'myinput', :'aria-label' => 'Aria live'
+
+
+	= form :boxedinput do
+		= input :email, label: 'E-Mail', placeholder: 'name@domain.com', autocomplete: 'email'
+
+
+	= input :checkboxes, label: 'Type', :options => ['Single', 'Married', {:label => 'Unknown', :value => 'damned', :checked => true}]
+
+	= input :radios, label: 'Type', :options => ['Single', 'Married', {:label => 'Unknown', :value => 'damned'}]
+
+	= form :boxedinput, :variant => 'select' do
+		= input :select, label: 'Type', :options => ['Single', 'Married', {:label => 'Unknown', :value => 'damned'}]
+
+
+- example "autocomplete" do
+	- example :desc do
+		:markdown
+			- **off**: The user must explicitly enter a value into this field for every use, or the document provides its own auto-completion method. The browser does not automatically complete the entry.
+			- **on**: The browser is allowed to automatically complete the value based on values that the user has entered during previous uses, however on does not provide any further information about what kind of data the user might be expected to enter.
+			- **name**: Full name.
+			- **honorific-prefix**: Prefix or title (e.g. "Mr.", "Ms.", "Dr.", "Mlle").
+			- **given-name**: First name.
+			- **additional-name**: Middle name.
+			- **family-name**: Last name.
+			- **honorific-suffix**: Suffix (e.g. "Jr.", "B.Sc.", "MBASW", "II").
+			- **nickname**
+			- **email**
+			- **username**
+			- **new-password**: A new password (e.g. when creating an account or changing a password).
+			- **current-password**
+			- **organization-title**: Job title (e.g. "Software Engineer", "Senior Vice President", "Deputy Managing Director").
+			- **organization**
+			- **street-address**
+			- address-line1, address-line2, address-line3, address-level4, address-level3, address-level2, address-level1
+			- **country**
+			- **country-name**
+			- **postal-code**
+			- **cc-name**: Full name as given on the payment instrument.
+			- **cc-given-name**
+			- **cc-additional-name**
+			- **cc-family-name**
+			- **cc-number**: Code identifying the payment instrument (e.g. the credit card number).
+			- **cc-exp**: Expiration date of the payment instrument.
+			- **cc-exp-month**
+			- **cc-exp-year**
+			- **cc-csc**: Security code for the payment instrument.
+			- **cc-type**: Type of payment instrument (e.g. Visa).
+			- **transaction-currency**
+			- **transaction-amount**
+			- **language**: Preferred language, valid BCP 47 language tag.
+			- **bday**
+			- **bday-day**
+			- **bday-month**
+			- **bday-year**
+			- **sex**: Gender identity (e.g. Female, Fa'afafine), free-form text, no newlines.
+			- **tel**
+			- **url**: Home page or other Web page corresponding to the company, person, address, or contact information in the other fields associated with this field.
+			- **photo**: Photograph, icon, or other image corresponding to the company, person, address, or contact information in the other fields associated with this field.

@@ -1,0 +1,39 @@
+---
+title: Fonts
+---
+
+- text = capture_haml do
+	ABCDEFGHIJKLM
+	%br
+	NOPQRSTUVWXYZ
+	%br
+	abcdefghijklm
+	%br
+	nopqrstuvwxyz
+	%br
+	1234567890
+
+
+= example 'Helvetica Neue Thin' do
+	%div{:style => 'font-family: Helvetica Neue, Helvetica; font-size: 60px; font-weight: 100;'}
+		= text
+
+
+= example 'Helvetica Neue Light' do
+	%div{:style => 'font-family: Helvetica Neue, Helvetica; font-size: 60px; font-weight: 200;'}
+		= text
+
+= example 'Helvetica Neue Normal' do
+	%div{:style => 'font-family: Helvetica Neue, Helvetica; font-size: 60px; font-weight: 400;'}
+		= text
+
+= example 'Helvetica Neue Bold' do
+	%div{:style => 'font-family: Helvetica Neue, Helvetica; font-size: 60px; font-weight: 600;'}
+		= text
+
+
+
+= example 'Georgia Italic' do
+	%div{:style => 'font-family: Georgia; font-style: italic; font-size: 60px;'}
+		= text
+

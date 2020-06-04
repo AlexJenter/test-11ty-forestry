@@ -1,0 +1,42 @@
+@import 'mediaqueries';
+
+@mixin gridsize($attribute, $factor: 1) {
+	#{$attribute}: $factor * 100px; // large PX to avoid auto-compile to rem
+
+	@include tablet {
+		#{$attribute}: $factor * 60px;
+	}
+}
+
+@mixin sitepadding($attribute, $include-above: true) {
+	@if $include-above {
+		#{$attribute}: calc(50% - #{$site-width / 2});
+	}
+
+	@include below-sitewidth {
+		#{$attribute}: 100px;
+	}
+	@include tablet {
+		#{$attribute}: 60px;
+	}
+	@include mobile {
+		#{$attribute}: 25px;
+	}
+	@include mobile-portrait {
+		#{$attribute}: 15px;
+	}
+}
+
+@mixin relativeWidth($float) {
+	width: $float * 100%;
+}
+
+@mixin component-gap($factor: 1) {
+	margin-bottom: $factor * 90px;
+	@include tablet {
+		margin-bottom: $factor * 10vw;
+	}
+	@include mobile-portrait {
+		margin-bottom: $factor * 40px;
+	}
+}

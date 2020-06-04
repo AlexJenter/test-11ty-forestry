@@ -1,0 +1,10 @@
+@mixin select-arrow {
+	content: '';
+	position: absolute;
+	top: calc(50% - 2px);
+	right: 20px;
+	border-color: transparent;
+	border-width: 5px 4px;
+	border-style: solid;
+	border-top-color: currentColor;
+}

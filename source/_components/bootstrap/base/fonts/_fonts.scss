@@ -1,0 +1,16 @@
+@font-face {
+	font-family: 'Bembo';
+	src: local('Bembo'), url('../fonts/c94b1030-cc7a-4538-9481-91e2a539d44b.woff2') format('woff2'),
+		url('../fonts/40023eb7-1ce9-487f-9c94-2dd2ae7022d3.woff') format('woff');
+	font-style: italic;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Helvetica Neue LT';
+	src: local('Helvetica Neue'), local('Helvetica Neue LT'),
+		url('../fonts/3dac71eb-afa7-4c80-97f0-599202772905.woff2') format('woff2'),
+		url('../fonts/34e0e4c0-c294-49bb-9a8e-1b2cafd54e32.woff') format('woff');
+	font-weight: normal;
+	font-display: swap;
+}

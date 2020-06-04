@@ -1,0 +1,40 @@
+- account ||= 'UA-XXXXXXXX-X'
+
+<!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+%script
+	:javascript
+		window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
+		ga('create', "#{account}", 'auto');ga('send','pageview')
+
+%script{ :src => "https://www.google-analytics.com/analytics.js", :async => true, :defer => true }
+
+:javascript
+	(function initTracker() {
+		var FILETYPES = /\.(zip|exe|pdf|doc*|xls*|ppt*|mp3)$/i;
+		var MAILTO = /^mailto\:/i;
+		var baseEl = document.querySelector('base');
+		var baseHref = baseEl ? baseEl.getAttribute('href') : '';
+		document.body.addEventListener('click', function(e){
+			var t = e.target, href;
+			while (!href && t) {
+				href = t.nodeName.toUpperCase() === 'A' && t.getAttribute('href');
+				t = t.parentNode;
+			}
+			// downloads
+			if (href && href.match(FILETYPES)) {
+				var extension = (/[.]/.exec(href)) ? /[^.]+$/.exec(href) : undefined;
+				track('Download', 'Click ' + extension, href);
+			// mail links
+			} else if (href && href.match(MAILTO)) {
+				track('E-Mail', 'Click E-Mail', href.replace(MAILTO, ''));
+			// external links
+			} else if (href && (href.match(/^https?\:/i)) && (!href.match(document.domain))) {
+				track('Link', 'Click Link', href.replace(/^https?\:\/\//i, ''));
+			}
+		}, false);
+
+		function track() {
+			var args = [].splice.call(arguments,0);
+			ga.apply(ga, ['send', 'event'].concat(args));
+		}
+	})();

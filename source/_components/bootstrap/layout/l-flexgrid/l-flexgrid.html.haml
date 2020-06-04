@@ -1,0 +1,166 @@
+---
+title: Flex Grid
+desc: The Grid consists/children that are separated by a constant gutter (20px). Try to use SteadyGrid whenever possible.
+---
+
+- example 'Standard Grid' do
+	- example :desc do
+		%p
+			The Grid consists/column children that are separated by a gap (gutter: 20px). (The «l-gap» class add a gutter margin to its children when applied to the «l-FlexGrid» class.)
+
+	.l-FlexGrid
+		.l1of1
+			.styleguide-layout-sample 1/1
+		.l1of2
+			.styleguide-layout-sample 1/2
+		.l1of2
+			.styleguide-layout-sample 1/2
+		- (1..3).each do
+			.l1of3
+				.styleguide-layout-sample 1/3
+		.l1of3
+			.styleguide-layout-sample
+				1/3
+
+		.l2of3
+			.styleguide-layout-sample 2/3
+		- (1..4).each do
+			.l1of4
+				.styleguide-layout-sample 1/4
+		.l1of4
+			.styleguide-layout-sample 1/4
+		.l3of4
+			.styleguide-layout-sample 3/4
+		- (1..5).each do
+			.l1of5
+				.styleguide-layout-sample 1/5
+
+
+
+- example 'Vertical Space' do
+
+	- example 'None: nogap' do
+
+		.l-FlexGrid.nogap
+			.l1of1
+				.styleguide-layout-sample 1/1
+			.l1of2
+				.styleguide-layout-sample 1/2
+			.l1of2
+				.styleguide-layout-sample 1/2
+
+
+	- example 'Large: gap' do
+
+		.l-FlexGrid.gap
+			.l1of1
+				.styleguide-layout-sample 1/1
+			.l1of2
+				.styleguide-layout-sample 1/2
+			.l1of2
+				.styleguide-layout-sample 1/2
+
+
+
+- example 'Horizontal Space' do
+
+	- example 'None: nogutter' do
+
+		.l-FlexGrid.nogutter
+			.l1of3
+				.styleguide-layout-sample 1/3
+			.l1of3
+				.styleguide-layout-sample 1/3
+			.l1of3
+				.styleguide-layout-sample 1/3
+			.l1of2
+				.styleguide-layout-sample 1/2
+			.l1of2
+				.styleguide-layout-sample 1/2
+
+
+	- example 'Large: gutter' do
+
+		.l-FlexGrid.gutter
+			.l1of3
+				.styleguide-layout-sample 1/3
+			.l1of3
+				.styleguide-layout-sample 1/3
+			.l1of3
+				.styleguide-layout-sample 1/3
+			.l1of2
+				.styleguide-layout-sample 1/2
+			.l1of2
+				.styleguide-layout-sample 1/2
+
+
+
+
+
+- example 'Alignment' do
+
+	- example 'Default: left' do
+
+		.l-FlexGrid
+			.l1of2
+				.styleguide-layout-sample 1/1
+			.l1of2
+				.styleguide-layout-sample 1/2
+			.l1of2
+				.styleguide-layout-sample 1/2
+
+	- example 'Center: center' do
+
+		.l-FlexGrid.center
+			.l1of2
+				.styleguide-layout-sample 1/1
+			.l1of2
+				.styleguide-layout-sample 1/2
+			.l1of2
+				.styleguide-layout-sample 1/2
+
+	- example 'Right: right' do
+
+		.l-FlexGrid.right
+			.l1of2
+				.styleguide-layout-sample 1/1
+			.l1of2
+				.styleguide-layout-sample 1/2
+			.l1of2
+				.styleguide-layout-sample 1/2
+
+
+
+- example 'Understanding Device Breakpoints' do
+
+	- example :desc do
+
+		%p
+			We've defined a few simple breakpoints, which you can use in conjunction with the layout classes. The define at which point a column should take a different width percentage.
+
+		%ul
+			%li Empty = Desktop
+			%li Tablet (Landscape)
+			%li Tablet-Portrait
+			%li Mobile (Landscape)
+			%li Mobile-Portrait
+
+
+	.l-FlexGrid
+		- (1..4).each do
+			.l1of5.l1of4-tablet.l1of3-tablet-portrait.l1of2-mobile.l1of1-mobile-portrait
+				.styleguide-layout-sample
+					.is-hidden-tablet 1/5
+					.is-visible-tablet.is-hidden-tablet-portrait 1/4
+					.is-visible-tablet-portrait.is-hidden-mobile 1/3
+					.is-visible-mobile.is-hidden-mobile-portrait 1/2
+					.is-visible-mobile-portrait 1/1
+		.l1of5.l1of1-tablet.l2of3-tablet-portrait.l1of1-mobile
+			.styleguide-layout-sample
+				.is-hidden-tablet 1/5
+				.is-visible-tablet.is-hidden-tablet-portrait 1/1
+				.is-visible-tablet-portrait.is-hidden-mobile 2/3
+				.is-visible-mobile 1/1
+
+
+

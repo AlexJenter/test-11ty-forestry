@@ -1,0 +1,31 @@
+---
+title: Left-Right Layout
+desc: Left Right (with floats)
+---
+
+
+
+= example 'Default' do
+
+	.l-LeftRight
+		.l-left
+			.styleguide-layout-sample Left
+		.l-right
+			.styleguide-layout-sample Right
+
+= example 'More Text' do
+
+	.l-LeftRight
+		.l-left
+			.styleguide-layout-sample= lorem.sentence
+		.l-right
+			.styleguide-layout-sample= lorem.sentence
+
+= example 'Mobile Reset' do
+
+	.l-LeftRight.reset-mobile
+		.l-right
+			.styleguide-layout-sample= lorem.sentence
+		.l-left
+			.styleguide-layout-sample= lorem.sentence
+

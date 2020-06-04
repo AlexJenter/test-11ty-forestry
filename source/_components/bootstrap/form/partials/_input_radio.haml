@@ -1,0 +1,4 @@
+- attr ||= {}
+- attr.merge! :type => 'radio'
+
+= form :input_option, locals.merge({:attr => attr})

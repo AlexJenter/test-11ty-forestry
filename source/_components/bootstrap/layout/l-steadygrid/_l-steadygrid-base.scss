@@ -1,0 +1,50 @@
+@mixin steadygrid($count, $gutter: 0, $gap: 0) {
+	margin-right: -$gutter;
+	margin-top: -$gap;
+
+	&:after {
+		content: '';
+		display: table;
+		clear: both;
+	}
+
+	> * {
+		float: left;
+
+		padding-right: $gutter;
+		padding-top: $gap;
+
+		// count
+		width: 100% / $count;
+
+		&:nth-child(#{$count}n + 1) {
+			clear: left;
+		}
+	}
+}
+
+@mixin steadygrid-count($value) {
+	> * {
+		width: 100% / $value;
+
+		&:nth-child(#{$value}n + 1) {
+			clear: left;
+		}
+	}
+}
+
+@mixin steadygrid-gutter($value: $gutter) {
+	margin-right: -$value;
+
+	> * {
+		padding-right: $value;
+	}
+}
+
+@mixin steadygrid-gap($value: $gutter) {
+	margin-top: -$value;
+
+	> * {
+		padding-top: $value;
+	}
+}

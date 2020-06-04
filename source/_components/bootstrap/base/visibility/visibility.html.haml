@@ -1,0 +1,16 @@
+---
+title: Visible / Hidden
+---
+
+- content_for :stylesheets do
+	:css
+		*[class^="is-visible-"] {
+			color: green;
+		}
+- 'desktop tablet tablet-portrait mobile mobile-portrait js print'.split(' ').each do |media|
+
+	- example media do
+		%div{:class => "is-visible-#{media}"}
+			= "Visible for #{media}"
+		%div{:class => "is-hidden-#{media}"}
+			= "Hidden for #{media}"

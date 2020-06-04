@@ -1,0 +1,36 @@
+.DS_Store
+Thumbs.db
+Desktop.ini
+node_modules
+
+# Ignore bundler config
+.bundle
+
+# Ignore the build directory
+/build
+/tmp
+
+# Ignore Sass' cache
+.sass-cache/
+.cache
+*.css.map
+
+# Ignore logs
+*.log
+
+# Sublime Projects
+*.sublime-project
+*.sublime-workspace
+
+# IntelliJ Project
+.idea
+
+# various
+.size-snapshot.json
+
+# auto generated files (via gulp)
+/data/icons.yml
+/source/_scripts/app/modules.js
+/source/_styles/helpers/_icons.scss
+/source/_styles/helpers/_colors.scss
+/source/components/bootstrap/base/picto/_sprite-settings.scss

@@ -1,0 +1,12 @@
+- text ||= nil
+- hidden ||= nil
+- attr ||= {}
+
+:ruby
+	attr.delete(:for)
+	attr[:class] = [attr[:class], ('visuallyhidden' if hidden)].compact.join(' ')
+	attr[:class] = nil if attr[:class].empty?
+
+%legend{attr}
+	%span.FormLegend= text
+

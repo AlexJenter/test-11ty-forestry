@@ -1,0 +1,963 @@
+-
+    iso_2:  "AF"
+    name:   "Afghanistan"
+
+-
+    iso_2:  "AL"
+    name:   "Albania"
+
+-
+    iso_2:  "DZ"
+    name:   "Algeria"
+
+-
+    iso_2:  "AS"
+    name:   "American Samoa"
+
+-
+    iso_2:  "AD"
+    name:   "Andorra"
+
+-
+    iso_2:  "AO"
+    name:   "Angola"
+
+-
+    iso_2:  "AI"
+    name:   "Anguilla"
+
+-
+    iso_2:  "AQ"
+    name:   "Antarctica"
+
+-
+    iso_2:  "AG"
+    name:   "Antigua And Barbuda"
+
+-
+    iso_2:  "AR"
+    name:   "Argentina"
+
+-
+    iso_2:  "AM"
+    name:   "Armenia"
+
+-
+    iso_2:  "AW"
+    name:   "Aruba"
+
+-
+    iso_2:  "AU"
+    name:   "Australia"
+
+-
+    iso_2:  "AT"
+    name:   "Austria"
+
+-
+    iso_2:  "AZ"
+    name:   "Azerbaijan"
+
+-
+    iso_2:  "BS"
+    name:   "Bahamas"
+
+-
+    iso_2:  "BH"
+    name:   "Bahrain"
+
+-
+    iso_2:  "BD"
+    name:   "Bangladesh"
+
+-
+    iso_2:  "BB"
+    name:   "Barbados"
+
+-
+    iso_2:  "BY"
+    name:   "Belarus"
+
+-
+    iso_2:  "BE"
+    name:   "Belgium"
+
+-
+    iso_2:  "BZ"
+    name:   "Belize"
+
+-
+    iso_2:  "BJ"
+    name:   "Benin"
+
+-
+    iso_2:  "BM"
+    name:   "Bermuda"
+
+-
+    iso_2:  "BT"
+    name:   "Bhutan"
+
+-
+    iso_2:  "BO"
+    name:   "Bolivia"
+
+-
+    iso_2:  "BA"
+    name:   "Bosnia And Herzegovina"
+
+-
+    iso_2:  "BW"
+    name:   "Botswana"
+
+-
+    iso_2:  "BV"
+    name:   "Bouvet Island"
+
+-
+    iso_2:  "BR"
+    name:   "Brazil"
+
+-
+    iso_2:  "IO"
+    name:   "British Indian Ocean Territory"
+
+-
+    iso_2:  "BN"
+    name:   "Brunei Darussalam"
+
+-
+    iso_2:  "BG"
+    name:   "Bulgaria"
+
+-
+    iso_2:  "BF"
+    name:   "Burkina Faso"
+
+-
+    iso_2:  "BI"
+    name:   "Burundi"
+
+-
+    iso_2:  "KH"
+    name:   "Cambodia"
+
+-
+    iso_2:  "CM"
+    name:   "Cameroon"
+
+-
+    iso_2:  "CA"
+    name:   "Canada"
+
+-
+    iso_2:  "CV"
+    name:   "Cape Verde"
+
+-
+    iso_2:  "KY"
+    name:   "Cayman Islands"
+
+-
+    iso_2:  "CF"
+    name:   "Central African Republic"
+
+-
+    iso_2:  "TD"
+    name:   "Chad"
+
+-
+    iso_2:  "CL"
+    name:   "Chile"
+
+-
+    iso_2:  "CN"
+    name:   "China"
+
+-
+    iso_2:  "CX"
+    name:   "Christmas Island"
+
+-
+    iso_2:  "CC"
+    name:   "Cocos (keeling) Islands"
+
+-
+    iso_2:  "CO"
+    name:   "Colombia"
+
+-
+    iso_2:  "KM"
+    name:   "Comoros"
+
+-
+    iso_2:  "CG"
+    name:   "Congo"
+
+-
+    iso_2:  "CD"
+    name:   "Congo, The Democratic Republic Of The"
+
+-
+    iso_2:  "CK"
+    name:   "Cook Islands"
+
+-
+    iso_2:  "CR"
+    name:   "Costa Rica"
+
+-
+    iso_2:  "CI"
+    name:   "Cote D'ivoire"
+
+-
+    iso_2:  "HR"
+    name:   "Croatia"
+
+-
+    iso_2:  "CU"
+    name:   "Cuba"
+
+-
+    iso_2:  "CY"
+    name:   "Cyprus"
+
+-
+    iso_2:  "CZ"
+    name:   "Czech Republic"
+
+-
+    iso_2:  "DK"
+    name:   "Denmark"
+
+-
+    iso_2:  "DJ"
+    name:   "Djibouti"
+
+-
+    iso_2:  "DM"
+    name:   "Dominica"
+
+-
+    iso_2:  "DO"
+    name:   "Dominican Republic"
+
+-
+    iso_2:  "TP"
+    name:   "East Timor"
+
+-
+    iso_2:  "EC"
+    name:   "Ecuador"
+
+-
+    iso_2:  "EG"
+    name:   "Egypt"
+
+-
+    iso_2:  "SV"
+    name:   "El Salvador"
+
+-
+    iso_2:  "GQ"
+    name:   "Equatorial Guinea"
+
+-
+    iso_2:  "ER"
+    name:   "Eritrea"
+
+-
+    iso_2:  "EE"
+    name:   "Estonia"
+
+-
+    iso_2:  "ET"
+    name:   "Ethiopia"
+
+-
+    iso_2:  "FK"
+    name:   "Falkland Islands (malvinas)"
+
+-
+    iso_2:  "FO"
+    name:   "Faroe Islands"
+
+-
+    iso_2:  "FJ"
+    name:   "Fiji"
+
+-
+    iso_2:  "FI"
+    name:   "Finland"
+
+-
+    iso_2:  "FR"
+    name:   "France"
+
+-
+    iso_2:  "GF"
+    name:   "French Guiana"
+
+-
+    iso_2:  "PF"
+    name:   "French Polynesia"
+
+-
+    iso_2:  "TF"
+    name:   "French Southern Territories"
+
+-
+    iso_2:  "GA"
+    name:   "Gabon"
+
+-
+    iso_2:  "GM"
+    name:   "Gambia"
+
+-
+    iso_2:  "GE"
+    name:   "Georgia"
+
+-
+    iso_2:  "DE"
+    name:   "Germany"
+
+-
+    iso_2:  "GH"
+    name:   "Ghana"
+
+-
+    iso_2:  "GI"
+    name:   "Gibraltar"
+
+-
+    iso_2:  "GR"
+    name:   "Greece"
+
+-
+    iso_2:  "GL"
+    name:   "Greenland"
+
+-
+    iso_2:  "GD"
+    name:   "Grenada"
+
+-
+    iso_2:  "GP"
+    name:   "Guadeloupe"
+
+-
+    iso_2:  "GU"
+    name:   "Guam"
+
+-
+    iso_2:  "GT"
+    name:   "Guatemala"
+
+-
+    iso_2:  "GN"
+    name:   "Guinea"
+
+-
+    iso_2:  "GW"
+    name:   "Guinea-bissau"
+
+-
+    iso_2:  "GY"
+    name:   "Guyana"
+
+-
+    iso_2:  "HT"
+    name:   "Haiti"
+
+-
+    iso_2:  "HM"
+    name:   "Heard Island And Mcdonald Islands"
+
+-
+    iso_2:  "VA"
+    name:   "Holy See (vatican City State)"
+
+-
+    iso_2:  "HN"
+    name:   "Honduras"
+
+-
+    iso_2:  "HK"
+    name:   "Hong Kong"
+
+-
+    iso_2:  "HU"
+    name:   "Hungary"
+
+-
+    iso_2:  "IS"
+    name:   "Iceland"
+
+-
+    iso_2:  "IN"
+    name:   "India"
+
+-
+    iso_2:  "ID"
+    name:   "Indonesia"
+
+-
+    iso_2:  "IR"
+    name:   "Iran, Islamic Republic Of"
+
+-
+    iso_2:  "IQ"
+    name:   "Iraq"
+
+-
+    iso_2:  "IE"
+    name:   "Ireland"
+
+-
+    iso_2:  "IL"
+    name:   "Israel"
+
+-
+    iso_2:  "IT"
+    name:   "Italy"
+
+-
+    iso_2:  "JM"
+    name:   "Jamaica"
+
+-
+    iso_2:  "JP"
+    name:   "Japan"
+
+-
+    iso_2:  "JO"
+    name:   "Jordan"
+
+-
+    iso_2:  "KZ"
+    name:   "Kazakstan"
+
+-
+    iso_2:  "KE"
+    name:   "Kenya"
+
+-
+    iso_2:  "KI"
+    name:   "Kiribati"
+
+-
+    iso_2:  "KP"
+    name:   "Korea, Democratic People's Republic Of"
+
+-
+    iso_2:  "KR"
+    name:   "Korea, Republic Of"
+
+-
+    iso_2:  "KV"
+    name:   "Kosovo"
+
+-
+    iso_2:  "KW"
+    name:   "Kuwait"
+
+-
+    iso_2:  "KG"
+    name:   "Kyrgyzstan"
+
+-
+    iso_2:  "LA"
+    name:   "Lao People's Democratic Republic"
+
+-
+    iso_2:  "LV"
+    name:   "Latvia"
+
+-
+    iso_2:  "LB"
+    name:   "Lebanon"
+
+-
+    iso_2:  "LS"
+    name:   "Lesotho"
+
+-
+    iso_2:  "LR"
+    name:   "Liberia"
+
+-
+    iso_2:  "LY"
+    name:   "Libyan Arab Jamahiriya"
+
+-
+    iso_2:  "LI"
+    name:   "Liechtenstein"
+
+-
+    iso_2:  "LT"
+    name:   "Lithuania"
+
+-
+    iso_2:  "LU"
+    name:   "Luxembourg"
+
+-
+    iso_2:  "MO"
+    name:   "Macau"
+
+-
+    iso_2:  "MK"
+    name:   "Macedonia, The Former Yugoslav Republic Of"
+
+-
+    iso_2:  "MG"
+    name:   "Madagascar"
+
+-
+    iso_2:  "MW"
+    name:   "Malawi"
+
+-
+    iso_2:  "MY"
+    name:   "Malaysia"
+
+-
+    iso_2:  "MV"
+    name:   "Maldives"
+
+-
+    iso_2:  "ML"
+    name:   "Mali"
+
+-
+    iso_2:  "MT"
+    name:   "Malta"
+
+-
+    iso_2:  "MH"
+    name:   "Marshall Islands"
+
+-
+    iso_2:  "MQ"
+    name:   "Martinique"
+
+-
+    iso_2:  "MR"
+    name:   "Mauritania"
+
+-
+    iso_2:  "MU"
+    name:   "Mauritius"
+
+-
+    iso_2:  "YT"
+    name:   "Mayotte"
+
+-
+    iso_2:  "MX"
+    name:   "Mexico"
+
+-
+    iso_2:  "FM"
+    name:   "Micronesia, Federated States Of"
+
+-
+    iso_2:  "MD"
+    name:   "Moldova, Republic Of"
+
+-
+    iso_2:  "MC"
+    name:   "Monaco"
+
+-
+    iso_2:  "MN"
+    name:   "Mongolia"
+
+-
+    iso_2:  "MS"
+    name:   "Montserrat"
+
+-
+    iso_2:  "ME"
+    name:   "Montenegro"
+
+-
+    iso_2:  "MA"
+    name:   "Morocco"
+
+-
+    iso_2:  "MZ"
+    name:   "Mozambique"
+
+-
+    iso_2:  "MM"
+    name:   "Myanmar"
+
+-
+    iso_2:  "NA"
+    name:   "Namibia"
+
+-
+    iso_2:  "NR"
+    name:   "Nauru"
+
+-
+    iso_2:  "NP"
+    name:   "Nepal"
+
+-
+    iso_2:  "NL"
+    name:   "Netherlands"
+
+-
+    iso_2:  "AN"
+    name:   "Netherlands Antilles"
+
+-
+    iso_2:  "NC"
+    name:   "New Caledonia"
+
+-
+    iso_2:  "NZ"
+    name:   "New Zealand"
+
+-
+    iso_2:  "NI"
+    name:   "Nicaragua"
+
+-
+    iso_2:  "NE"
+    name:   "Niger"
+
+-
+    iso_2:  "NG"
+    name:   "Nigeria"
+
+-
+    iso_2:  "NU"
+    name:   "Niue"
+
+-
+    iso_2:  "NF"
+    name:   "Norfolk Island"
+
+-
+    iso_2:  "MP"
+    name:   "Northern Mariana Islands"
+
+-
+    iso_2:  "NO"
+    name:   "Norway"
+
+-
+    iso_2:  "OM"
+    name:   "Oman"
+
+-
+    iso_2:  "PK"
+    name:   "Pakistan"
+
+-
+    iso_2:  "PW"
+    name:   "Palau"
+
+-
+    iso_2:  "PS"
+    name:   "Palestinian Territory, Occupied"
+
+-
+    iso_2:  "PA"
+    name:   "Panama"
+
+-
+    iso_2:  "PG"
+    name:   "Papua New Guinea"
+
+-
+    iso_2:  "PY"
+    name:   "Paraguay"
+
+-
+    iso_2:  "PE"
+    name:   "Peru"
+
+-
+    iso_2:  "PH"
+    name:   "Philippines"
+
+-
+    iso_2:  "PN"
+    name:   "Pitcairn"
+
+-
+    iso_2:  "PL"
+    name:   "Poland"
+
+-
+    iso_2:  "PT"
+    name:   "Portugal"
+
+-
+    iso_2:  "PR"
+    name:   "Puerto Rico"
+
+-
+    iso_2:  "QA"
+    name:   "Qatar"
+
+-
+    iso_2:  "RE"
+    name:   "Reunion"
+
+-
+    iso_2:  "RO"
+    name:   "Romania"
+
+-
+    iso_2:  "RU"
+    name:   "Russian Federation"
+
+-
+    iso_2:  "RW"
+    name:   "Rwanda"
+
+-
+    iso_2:  "SH"
+    name:   "Saint Helena"
+
+-
+    iso_2:  "KN"
+    name:   "Saint Kitts And Nevis"
+
+-
+    iso_2:  "LC"
+    name:   "Saint Lucia"
+
+-
+    iso_2:  "PM"
+    name:   "Saint Pierre And Miquelon"
+
+-
+    iso_2:  "VC"
+    name:   "Saint Vincent And The Grenadines"
+
+-
+    iso_2:  "WS"
+    name:   "Samoa"
+
+-
+    iso_2:  "SM"
+    name:   "San Marino"
+
+-
+    iso_2:  "ST"
+    name:   "Sao Tome And Principe"
+
+-
+    iso_2:  "SA"
+    name:   "Saudi Arabia"
+
+-
+    iso_2:  "SN"
+    name:   "Senegal"
+
+-
+    iso_2:  "RS"
+    name:   "Serbia"
+
+-
+    iso_2:  "SC"
+    name:   "Seychelles"
+
+-
+    iso_2:  "SL"
+    name:   "Sierra Leone"
+
+-
+    iso_2:  "SG"
+    name:   "Singapore"
+
+-
+    iso_2:  "SK"
+    name:   "Slovakia"
+
+-
+    iso_2:  "SI"
+    name:   "Slovenia"
+
+-
+    iso_2:  "SB"
+    name:   "Solomon Islands"
+
+-
+    iso_2:  "SO"
+    name:   "Somalia"
+
+-
+    iso_2:  "ZA"
+    name:   "South Africa"
+
+-
+    iso_2:  "GS"
+    name:   "South Georgia And The South Sandwich Islands"
+
+-
+    iso_2:  "ES"
+    name:   "Spain"
+
+-
+    iso_2:  "LK"
+    name:   "Sri Lanka"
+
+-
+    iso_2:  "SD"
+    name:   "Sudan"
+
+-
+    iso_2:  "SR"
+    name:   "Suriname"
+
+-
+    iso_2:  "SJ"
+    name:   "Svalbard And Jan Mayen"
+
+-
+    iso_2:  "SZ"
+    name:   "Swaziland"
+
+-
+    iso_2:  "SE"
+    name:   "Sweden"
+
+-
+    iso_2:  "CH"
+    name:   "Switzerland"
+
+-
+    iso_2:  "SY"
+    name:   "Syrian Arab Republic"
+
+-
+    iso_2:  "TW"
+    name:   "Taiwan, Province Of China"
+
+-
+    iso_2:  "TJ"
+    name:   "Tajikistan"
+
+-
+    iso_2:  "TZ"
+    name:   "Tanzania, United Republic Of"
+
+-
+    iso_2:  "TH"
+    name:   "Thailand"
+
+-
+    iso_2:  "TG"
+    name:   "Togo"
+
+-
+    iso_2:  "TK"
+    name:   "Tokelau"
+
+-
+    iso_2:  "TO"
+    name:   "Tonga"
+
+-
+    iso_2:  "TT"
+    name:   "Trinidad And Tobago"
+
+-
+    iso_2:  "TN"
+    name:   "Tunisia"
+
+-
+    iso_2:  "TR"
+    name:   "Turkey"
+
+-
+    iso_2:  "TM"
+    name:   "Turkmenistan"
+
+-
+    iso_2:  "TC"
+    name:   "Turks And Caicos Islands"
+
+-
+    iso_2:  "TV"
+    name:   "Tuvalu"
+
+-
+    iso_2:  "UG"
+    name:   "Uganda"
+
+-
+    iso_2:  "UA"
+    name:   "Ukraine"
+
+-
+    iso_2:  "AE"
+    name:   "United Arab Emirates"
+
+-
+    iso_2:  "GB"
+    name:   "United Kingdom"
+
+-
+    iso_2:  "US"
+    name:   "United States"
+
+-
+    iso_2:  "UM"
+    name:   "United States Minor Outlying Islands"
+
+-
+    iso_2:  "UY"
+    name:   "Uruguay"
+
+-
+    iso_2:  "UZ"
+    name:   "Uzbekistan"
+
+-
+    iso_2:  "VU"
+    name:   "Vanuatu"
+
+-
+    iso_2:  "VE"
+    name:   "Venezuela"
+
+-
+    iso_2:  "VN"
+    name:   "Viet Nam"
+
+-
+    iso_2:  "VG"
+    name:   "Virgin Islands, British"
+
+-
+    iso_2:  "VI"
+    name:   "Virgin Islands, U.s."
+
+-
+    iso_2:  "WF"
+    name:   "Wallis And Futuna"
+
+-
+    iso_2:  "EH"
+    name:   "Western Sahara"
+
+-
+    iso_2:  "YE"
+    name:   "Yemen"
+
+-
+    iso_2:  "ZM"
+    name:   "Zambia"
+
+-
+    iso_2:  "ZW"
+    name:   "Zimbabwe"

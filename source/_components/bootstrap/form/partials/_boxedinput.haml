@@ -1,0 +1,6 @@
+-# content
+- tag ||= :div
+- variant ||= nil
+
+= content_tag tag, :class => ['BoxedInput', variant].compact.join(' ') do
+	= content

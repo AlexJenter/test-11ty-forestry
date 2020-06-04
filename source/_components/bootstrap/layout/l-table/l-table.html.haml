@@ -1,0 +1,67 @@
+---
+title: Table Layout
+---
+
+
+
+- example 'Will reset in Mobile Portrait' do
+
+	.l-Table.reset-mobile-portrait
+		.l-Table--cell
+			.styleguide-layout-sample Left
+		.l-Table--cell
+			.styleguide-layout-sample Right
+
+
+- example 'Will reset in Mobile, no gap (below)' do
+
+	.l-Table.reset-mobile.no-gap
+		.l-Table--cell
+			.styleguide-layout-sample Left
+		.l-Table--cell
+			.styleguide-layout-sample Right
+
+
+- example 'Cell with minimum width, no gutter' do
+
+	.l-Table.no-gutter
+		.l-Table--cell.min
+			.styleguide-layout-sample Min
+		.l-Table--cell
+			.styleguide-layout-sample Normal
+		.l-Table--cell
+			.styleguide-layout-sample Normal too
+
+
+- example 'Autobreak reset, top aligned' do
+	- example :desc do
+		Note that we wrap the table layout into a div without padding to allow correct overflow measurement. The usual example holder has quite some padding.
+
+	%div
+		.l-Table.align-top{:'data-js-autobreak' => 'reset'}
+			.l-Table--cell
+				.styleguide-layout-sample Die Postautofahrerlohnausweise brauchen viel Platz.
+			.l-Table--cell
+				.styleguide-layout-sample Es gibt aber auch andere unschlüssige Erfolgsrezepte.
+			.l-Table--cell
+				.styleguide-layout-sample Irgendwann hat einfach kein normallanger Textbaustein mehr Platz.
+
+- example 'Autobreak reset, even' do
+
+	.l-Table.even{:'data-js-autobreak' => 'reset'}
+		.l-Table--cell
+			.styleguide-layout-sample Die Postautofahrerlohnausweise brauchen viel Platz.
+		.l-Table--cell
+			.styleguide-layout-sample Es gibt aber auch andere unschlüssige Erfolgsrezepte.
+		.l-Table--cell
+			.styleguide-layout-sample Irgendwann hat einfach kein normallanger Textbaustein mehr Platz.
+
+
+- example 'Even width Table, top aligned' do
+
+	.l-Table.even.align-top
+		.l-Table--cell
+			.styleguide-layout-sample= lorem.sentence
+		.l-Table--cell
+			.styleguide-layout-sample= lorem.sentence
+

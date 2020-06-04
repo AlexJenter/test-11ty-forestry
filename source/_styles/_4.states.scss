@@ -1,0 +1,11 @@
+// Hide visually
+
+.is-hidden {
+	display: none !important;
+}
+
+.is-disabled,
+*[disabled] {
+	opacity: 0.5;
+	pointer-events: none;
+}

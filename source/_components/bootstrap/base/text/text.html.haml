@@ -1,0 +1,71 @@
+---
+title: Text
+---
+
+- content_for :stylesheets do
+	= stylesheet_link_tag 'text', { :media => 'all' }
+
+- example 'Text Sizes' do
+	- example :desc do
+		%p Please note that the following classes are only for demo purposes. Those text sizes are only used internally via SASS mixins.
+	- ['xxs','xs','s','m','l','xl','xxl','xxl'].reverse.each do |size|
+		- example size do
+			%p{:class => "demo-text-#{size}"}= lorem.sentence
+
+- example 'Rich text' do
+	- example :desc do
+		%p Avoid using Headings in richtext! Heading are only included for special purposes like markdown styling.
+
+	.richtext
+
+		%h1 Heading 1
+
+		%h2 Paragraphs
+
+		%p= lorem.paragraph
+		%p= lorem.paragraph
+
+		%h3 Strong
+
+		%p I am <strong>Strong</strong>
+
+		%h3 Links
+
+		%p I am a <a href="">Link</a>
+
+
+		%h2 Lists
+
+		%h3 Unordered
+		%ul
+			%li= lorem.sentence
+			%li= lorem.sentence
+			%li= lorem.sentence
+
+		%h3 Ordered
+		%ol
+			%li= lorem.sentence
+			%li= lorem.sentence
+			%li= lorem.sentence
+
+
+		%h2 Code
+
+		%pre Some code
+
+- example 'Text wrap/hyphens' do
+	- example 'Text nowrap' do
+		%span.t-nowrap=lorem.sentences(3)
+
+	- example 'Text w/ auto hyphens (no Chrome on Windows support)' do
+		- example :desc do
+			Check Browsersuport on caniuse:
+			https://caniuse.com/#feat=css-hyphens
+
+		%p.t-hyphenate=lorem.sentences(3)
+
+	- example 'Soft hyphen (&shy;)' do
+		%p
+			=lorem.sentence.delete(' ')
+			&shy;
+			=lorem.sentence.delete(' ')

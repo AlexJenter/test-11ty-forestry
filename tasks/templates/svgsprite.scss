@@ -1,0 +1,3 @@
+$svgsprite: (<: for (var i in data) { :>
+	<:= i :>: (<:= data[i].width :>px <:= data[i].height :>px),
+<: } :>);

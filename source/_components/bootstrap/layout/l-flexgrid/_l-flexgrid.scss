@@ -1,0 +1,88 @@
+// column layouts
+//
+// Inspired by: http://csswizardry.com/2013/02/responsive-flexgrid-systems-a-solution/
+//
+// This flexgrid works with flex layout – it has a fallback solution (for ie9) which
+// only works nicely when there's no space between the .l-col elements.
+//
+// You may also try to go with floats as a fallback, but that bares other risks.
+
+.l-FlexGrid {
+	@include flexgrid($gutter, $gutter, 1/3);
+}
+
+// column width
+
+@mixin relGridColumn($device, $len, $total) {
+	.l#{$len}of#{$total}#{$device} {
+		@include relativeWidth($len / $total);
+	}
+}
+
+@mixin flexgridClasses($device) {
+	@include relGridColumn($device, 1, 1);
+	@include relGridColumn($device, 1, 2);
+	@include relGridColumn($device, 1, 3);
+	@include relGridColumn($device, 2, 3);
+	@include relGridColumn($device, 1, 4);
+	@include relGridColumn($device, 3, 4);
+}
+
+@include flexgridClasses('');
+
+body {
+	// Add body selector to overwrite screen styles
+	@include print {
+		@include flexgridClasses('-print');
+	}
+}
+
+@include tablet {
+	@include flexgridClasses('-tablet');
+}
+@include tablet-portrait {
+	@include flexgridClasses('-tablet-portrait');
+}
+@include mobile {
+	@include flexgridClasses('-mobile');
+}
+@include mobile-narrow {
+	@include flexgridClasses('-mobile-narrow');
+}
+@include mobile-portrait {
+	@include flexgridClasses('-mobile-portrait');
+}
+
+// column alignment
+
+.l-FlexGrid.left {
+	@include flexgrid-left;
+}
+
+.l-FlexGrid.center {
+	@include flexgrid-center;
+}
+
+.l-FlexGrid.right {
+	@include flexgrid-right;
+}
+
+// gutter variants
+
+.l-FlexGrid.nogutter {
+	@include flexgrid-gutter(0);
+}
+
+.l-FlexGrid.gutter {
+	@include flexgrid-gutter($gutter);
+}
+
+// vertical gap variants
+
+.l-FlexGrid.gap {
+	@include flexgrid-gap($gutter);
+}
+
+.l-FlexGrid.nogap {
+	@include flexgrid-gap(0);
+}

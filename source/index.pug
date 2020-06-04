@@ -1,0 +1,20 @@
+---
+title: Homepage
+layout: default.pug
+---
+
+include /base/Paragraph/Paragraph
+
+.max-w-4xl.mx-auto.p-8
+	h1.h1= title
+	p= url_for('/action')
+	p= slug('Whatever you want')
+
+	+Paragraph
+		| What a shitty shit.
+
+	+Paragraph({ variant: 'sad' })
+		| This is sad.
+
+	article(data-message)
+	article(data-navigation)

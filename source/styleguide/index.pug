@@ -1,0 +1,12 @@
+---
+title: Styleguide
+layout: default.pug
+---
+
+.max-w-4xl.mx-auto.p-8
+	h1.h1= title
+	p= page.url
+	p= url_for('/action')
+
+	article(data-message)
+	article(data-navigation)

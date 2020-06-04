@@ -1,0 +1,29 @@
+project:
+  # same as used in git repository or tracker
+
+website_host:
+    # e.g. 'https://www.example.com'
+
+website_language:
+  'en'
+
+website_title:
+  'Website'
+
+website_description:
+  'A great website'
+
+website_image:
+  # e.g. '/dummy/social.jpg'
+
+google_analytics:
+  false # like 'UA-XXXXXXXX-X'
+
+media_directory:
+  '//build.hinderlingvolkart.com/media/'
+
+flximg:
+  '//flximg.com/#{width}x#{height}/unsplash'
+
+prototype_link:
+  'https://build.hinderlingvolkart.com/hv/boilerplate/'

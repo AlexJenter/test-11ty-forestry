@@ -1,0 +1,48 @@
+---
+title: "Pictos"
+desc: Easy to use svg pictos
+---
+
+
+
+
+
+- content_for :stylesheets do
+	:css
+		.styleguide-pictobox {
+			width: 100px;
+			text-align: center;
+			display: inline-block;
+			margin-left: 5px;
+			margin-bottom: 5px;
+			background-color: #ccc;
+			vertical-align: top;
+		}
+		.styleguide-pictobox > strong {
+			display:  block;
+			background: #fff;
+			padding: 1px 5px 3px;
+		}
+		.styleguide-pictobox > [data-picto] {
+			margin: 15px;
+		}
+		.styleguide-example:hover svg {
+			outline: 1px solid rgba(50,50,50,0.5);
+		}
+
+- example 'Raw and uncolored' do
+
+	- data.sprite.each do |name, svg|
+		.styleguide-pictobox
+			= picto name
+			%strong= name
+
+
+- example 'White' do
+
+	- data.sprite.each do |name, svg|
+		.styleguide-pictobox
+			= picto name, _class: 'white'
+			%strong= name
+
+

@@ -1,0 +1,5 @@
+%svg{xmlns: "http://www.w3.org/2000/svg", 'xmlns:xlink': "http://www.w3.org/1999/xlink"}
+	- data.sprite.each do |name, svg|
+		- symbol = svg.content.gsub /<svg.+(viewBox=".+?").*?>(.+)<\/svg>/, '<symbol id="picto-' + name + '" \1>\2</symbol>'
+		-# symbol.gsub!(/ (fill)=".+?"/, '')
+		= symbol

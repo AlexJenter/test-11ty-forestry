@@ -1,0 +1,44 @@
+[data-picto] {
+	display: inline-block;
+	position: relative;
+	height: 1.2ex;
+	font-size: 16px;
+
+	> svg {
+		height: 0; // only for above the fold, will be overridden by specific pictos
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		overflow: visible;
+
+		display: block;
+		width: 100%;
+		fill: $c-black;
+
+		@supports (display: inline-flex) {
+			position: relative;
+			top: 0;
+			transform: none;
+		}
+	}
+
+	&.white > svg {
+		fill: $c-white;
+	}
+}
+
+@supports (display: inline-flex) {
+	.Icon[data-picto],
+	.Icon:not(.inline)[data-picto],
+	[data-picto] {
+		display: inline-flex;
+		align-items: center;
+	}
+}
+
+// high-contrast
+@media screen and (-ms-high-contrast: active) {
+	[data-picto] > svg {
+		stroke: green;
+	}
+}

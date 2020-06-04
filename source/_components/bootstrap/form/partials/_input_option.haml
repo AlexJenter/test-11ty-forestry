@@ -1,0 +1,9 @@
+- attr ||= {}
+- label = extractLabelAttributes(attr)
+- attr[:type] ||= 'checkbox'
+- attr[:value] ||= uid
+- variant ||= attr.delete(:variant)
+
+%span.OptionInput{:class => [attr[:type], variant]}
+	%input{attr}
+	= form :label, label

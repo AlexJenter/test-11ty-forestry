@@ -1,0 +1,6 @@
+- attr ||= {}
+- label = extractLabelAttributes(attr)
+- attr = {:rows => 10}.merge(attr)
+
+= form :label, label
+%textarea{attr}

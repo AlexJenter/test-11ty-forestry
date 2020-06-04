@@ -1,0 +1,6 @@
+/source/_scripts/vendor
+/tasks/gulp/
+/tmp/
+/build/
+**/node_modules/**
+!/**/.eslintrc.js

@@ -1,0 +1,5 @@
+- attr = cleanLocals(locals)
+- name = (attr.delete(:name) or 'unknown')
+- attr[:'data-icon'] = name
+
+%span.Icon{attr}

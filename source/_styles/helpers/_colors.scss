@@ -1,0 +1,4 @@
+@import 'colors/all';
+@import 'colors/default';
+
+$defaultColors: map-get($colors, normal);

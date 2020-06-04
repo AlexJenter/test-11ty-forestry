@@ -1,0 +1,53 @@
+---
+title: "Icons"
+desc: Easy to use icons
+---
+
+
+- data.icons.each do |group|
+	- example group[:name].capitalize do
+		%ul.styleguide-icons
+
+			- group[:icons].each do |img|
+				%li{:title => '@include ico(' + group[:name] + ', '+ img[:name] +', middle, center);'}
+					%i
+						= component 'icon', :name => img[:name]
+					%strong= "#{img[:name]}"
+
+
+
+- content_for :stylesheets do
+	:css
+		.styleguide-icons > li {
+			width: 100px;
+			display: inline-block;
+			margin-left: 5px;
+			margin-bottom: 2ex;
+			vertical-align: top;
+		}
+		.styleguide-icons > li > strong {
+			display:  block;
+			font-size: 14px;
+			line-height: 1.1;
+			margin-top: 3px;
+		}
+		.styleguide-icons > li > i {
+			display: block;
+			min-height: 100px;
+			background: #fff;
+			padding: 1px 5px 3px;
+			background-color: #ccc;
+			text-align: center;
+			line-height: 100px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+		.styleguide-icons .Icon {
+			color: #009792;
+		}
+		.styleguide-icons:hover .Icon {
+			outline: 1px solid rgba(255,255,255,0.7);
+			box-shadow: 0 0 20px rgba(0,0,0,0.25);
+		}
+

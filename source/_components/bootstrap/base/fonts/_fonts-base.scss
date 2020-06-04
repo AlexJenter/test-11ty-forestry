@@ -1,0 +1,28 @@
+@mixin font($style) {
+	@if $style == 'thin' {
+		font-weight: 100;
+	}
+
+	@if $style == 'light' {
+		font-weight: 200;
+	}
+
+	@if $style == 'normal' {
+		font-weight: normal;
+	}
+
+	@if $style == 'bold' {
+		font-weight: bold;
+	}
+
+	@if $style == 'italic' {
+		font-family: $alt-font;
+		font-weight: normal;
+		font-style: italic;
+	}
+}
+
+@mixin textantialiasing() {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}

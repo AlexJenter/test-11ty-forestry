@@ -1,0 +1,53 @@
+---
+title: Social Metatags
+examples: false
+---
+
+- content_for :stylesheets do
+	:css
+		.as-missing,
+		.as-value {
+			margin: 0 !important;
+			font-size: 30px;
+		}
+		.as-missing {
+			color: red;
+		}
+
+:ruby
+	def val(text)
+		if text
+			return "<p class=as-value>#{text}</p>"
+		else
+			return "<p class=as-missing>?</p>"
+		end
+	end
+
+= styleguide :title do
+	Description
+
+= val(data.config.website_description)
+
+
+= styleguide :title do
+	Host
+
+= val(data.config.website_host)
+
+
+= styleguide :title do
+	Image
+
+= val(data.config.website_image)
+
+
+= styleguide :title do
+	Twitter Handle
+
+= val(data.config.twitter)
+
+
+= styleguide :title do
+	Language
+
+= val(data.config.website_language)

@@ -1,0 +1,8 @@
+- attr = cleanLocals(locals)
+- name = (attr.delete(:name) or 'unknown')
+- attr[:'data-picto'] = name
+
+%span.Icon{attr}
+	- if attr[:title]
+		%span.visuallyhidden= attr[:title]
+	<svg aria-hidden="true"><use xlink:href="#picto-#{name}"></use></svg>

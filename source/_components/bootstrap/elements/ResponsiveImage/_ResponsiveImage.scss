@@ -1,0 +1,37 @@
+img[data-sizes] {
+	width: 100%;
+}
+
+[data-sizes],
+.Image {
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
+.Image {
+	position: relative;
+	overflow: hidden;
+	background-color: #999;
+
+	> [data-sizes] {
+		background-size: inherit;
+		background-repeat: inherit;
+		background-position: inherit;
+		display: block;
+		transform: scale(1.02);
+		opacity: 0;
+
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+	}
+
+	> .is-loaded {
+		opacity: 1;
+		transform: none;
+		transition: opacity 0.5s, transform ease-out 0.8s;
+	}
+}

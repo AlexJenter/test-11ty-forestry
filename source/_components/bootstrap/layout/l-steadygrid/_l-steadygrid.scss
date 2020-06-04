@@ -1,0 +1,54 @@
+.l-SteadyGrid {
+	@include steadygrid(2, $gutter, $gutter);
+}
+
+// gutter variants
+
+.l-SteadyGrid.noGutter {
+	@include steadygrid-gutter(0);
+}
+
+// vertical gap variants
+
+.l-SteadyGrid.largeGap {
+	@include steadygrid-gap($gutter * 2);
+}
+
+.l-SteadyGrid.noGap {
+	@include steadygrid-gap(0);
+}
+
+@mixin steadygridColumn($device, $len) {
+	.l-SteadyGrid.l#{$len}#{$device} {
+		@include steadygrid-count($len);
+	}
+}
+
+@mixin steadygridClasses($device) {
+	@include steadygridColumn($device, 1);
+	@include steadygridColumn($device, 2);
+	@include steadygridColumn($device, 3);
+	@include steadygridColumn($device, 4);
+}
+
+@include steadygridClasses('');
+
+@include tablet {
+	@include steadygridClasses('-tablet');
+}
+
+@include tablet-portrait {
+	@include steadygridClasses('-tablet-portrait');
+}
+
+@include mobile {
+	@include steadygridClasses('-mobile');
+}
+
+@include mobile-narrow {
+	@include steadygridClasses('-mobile-narrow');
+}
+
+@include mobile-portrait {
+	@include steadygridClasses('-mobile-portrait');
+}

@@ -1,0 +1,9 @@
+@each $name, $size in $svgsprite {
+	[data-picto='#{$name}'] {
+		width: nth($size, 1) / 16px * 1em;
+	}
+
+	[data-picto='#{$name}'] > svg {
+		height: nth($size, 2) / 16px * 1em;
+	}
+}

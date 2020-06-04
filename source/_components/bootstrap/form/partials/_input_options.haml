@@ -1,0 +1,13 @@
+- attr ||= {}
+- label = extractLabelAttributes(attr)
+- attr[:name] ||= (attr[:id] ? attr[:id] : uid)
+- options ||= attr.delete(:options)
+- selected ||= attr.delete(:selected)
+- type ||= attr[:type]
+
+%fieldset.OptionInputGroup{:class => attr.delete(:variant)}
+	= form :legend, label
+
+	- options.each_with_index do |option, i|
+		- optionAttr = option.is_a?(String) ? {:label => option} : option
+		= input type, {:name => attr[:name], :checked => (true if selected == i)}.merge(optionAttr)

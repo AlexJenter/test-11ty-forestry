@@ -1,0 +1,33 @@
+// Try to avoid using these styles altogether
+
+// it is probably not always necessary to have
+// css classes for every icon.
+
+@each $name, $icon in ico-icons(global) {
+	[data-icon='#{$name}']:after {
+		@include ico(global, $name, middle, center);
+	}
+
+	.Icon[data-icon='#{$name}'] {
+		padding: 0 (ico-width(global, $name) / 2);
+		height: ico-height(global, $name);
+		margin: 0;
+	}
+}
+
+.Icon.inline {
+	display: inline;
+	display: -webkit-inline-box; /* stylelint-disable-line */ // needed for safari
+	min-height: 1ex; // needed for opera
+	letter-spacing: -1ex;
+	text-decoration: none;
+	position: relative;
+
+	&:before {
+		content: '';
+	}
+}
+
+.Icon:not(.inline) {
+	@include icon;
+}

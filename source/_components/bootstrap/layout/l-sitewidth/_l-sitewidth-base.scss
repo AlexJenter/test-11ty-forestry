@@ -1,0 +1,6 @@
+@mixin l-sitewidth {
+	@include sitepadding(margin-left);
+	@include sitepadding(margin-right);
+
+	position: relative;
+}

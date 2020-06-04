@@ -1,0 +1,26 @@
+input,
+textarea {
+	padding: 5px;
+	border: 1px solid #aaa;
+
+	font-size: 16px; // to prevent auto zoom on input:focus on iOS devices
+
+	&:focus {
+		border-color: #000;
+	}
+}
+
+select {
+	padding: 5px;
+	border: 1px solid #aaa;
+}
+
+.FormInput {
+	display: block;
+	margin-bottom: 1.5ex;
+
+	> label {
+		display: block;
+		margin-bottom: 0.2ex;
+	}
+}

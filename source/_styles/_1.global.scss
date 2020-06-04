@@ -1,0 +1,84 @@
+html {
+	width: 100%;
+	font-size: 16px; // uppercase PX won't be translated to rem
+	text-size-adjust: 100%;
+	background-color: #fff;
+
+	@media (max-width: #{($mq-tablet + $mq-desktop) / 2}) {
+		font-size: 0.85 * 16px;
+	}
+
+	@media (max-width: #{($mq-tablet-portrait + $mq-tablet) / 2}) {
+		font-size: 0.8 * 16px;
+	}
+
+	@media (max-width: #{($mq-mobile + $mq-tablet-portrait) / 2}) {
+		font-size: 0.75 * 16px;
+	}
+
+	@media (max-width: #{($mq-mobile-portrait + $mq-mobile) / 2}) {
+		font-size: 0.7 * 16px;
+	}
+}
+
+body {
+	@include body-font;
+	font-size: $base-font-size;
+	line-height: $base-line-height;
+	overflow-x: hidden;
+}
+
+/* stylelint-disable selector-no-vendor-prefix */
+::-moz-selection {
+	text-shadow: none;
+}
+
+::selection {
+	text-shadow: none;
+}
+/* stylelint-enable */
+
+body,
+input,
+select,
+button,
+textarea {
+	@include textantialiasing;
+}
+
+.logo {
+	text-decoration: none;
+
+	&:before {
+		content: '← ';
+	}
+}
+
+// links
+a:active {
+	outline: none;
+}
+
+*:focus {
+	outline: none;
+}
+
+// various text styles
+
+abbr {
+	border-bottom: 1px dotted gray;
+}
+
+p sup {
+	position: relative;
+	top: -0.75ex;
+}
+
+p sub {
+	position: relative;
+	top: 0.5ex;
+}
+
+button {
+	cursor: pointer;
+}

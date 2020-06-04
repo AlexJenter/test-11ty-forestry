@@ -1,0 +1,18 @@
+- attr ||= {}
+- label = extractLabelAttributes(attr)
+- options ||= attr.delete(:options)
+- options ||= "First Second Third".split(' ')
+- value ||= attr.delete(:value)
+- selected ||= false
+
+= form :label, label
+.Input.select
+	%select{attr}
+		- options.each_with_index do |option, i|
+			- option = option.is_a?(String) ? {:label => option} : option
+			- option = {:value => option[:label]}.merge(option)
+			- checked = (selected == i) || (value == option[:value])
+			- option = {:selected => checked}.merge(option)
+			- optionLabel = option.delete(:label)
+			%option{option}= optionLabel
+

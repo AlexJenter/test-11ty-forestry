@@ -1,0 +1,42 @@
+.l-LeftRight {
+	@include clearfix;
+
+	margin-top: -$gutter;
+
+	.l-left {
+		display: block;
+		float: left;
+		margin-top: $gutter;
+	}
+
+	.l-right {
+		display: block;
+		float: right;
+		margin-top: $gutter;
+	}
+}
+
+@mixin leftrightClasses($device) {
+	.l-LeftRight.reset-#{$device} {
+		.l-left,
+		.l-right {
+			float: none;
+		}
+	}
+}
+
+@include tablet {
+	@include leftrightClasses('tablet');
+}
+
+@include tablet-portrait {
+	@include leftrightClasses('tablet-portrait');
+}
+
+@include mobile {
+	@include leftrightClasses('mobile');
+}
+
+@include mobile-portrait {
+	@include leftrightClasses('mobile-portrait');
+}

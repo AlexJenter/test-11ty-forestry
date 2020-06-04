@@ -1,0 +1,13 @@
+
+- text ||= nil
+- hidden ||= nil
+- attr ||= {}
+- ignore ||= false
+
+:ruby
+	attr[:class] = [attr[:class], ('visuallyhidden' if hidden)].compact.join(' ')
+	attr[:class] = nil if attr[:class].empty?
+
+- unless ignore
+	%label{attr}= text
+

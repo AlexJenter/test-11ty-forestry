@@ -1,0 +1,6 @@
+mixin Paragraph({ variant = '', size = 'xxl' } = {})
+	p(class=[variant, size])
+		if block
+			block
+		else
+			| Nothing

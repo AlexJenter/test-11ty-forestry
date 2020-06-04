@@ -1,0 +1,9 @@
+mixin Header
+	header.Header
+		nav
+			a.Header--logoLink(href='/')
+				| 11ty Starter
+			ul.Header--navigation
+				each item in navigation.header
+					li.Header--navigation--item
+						a.Header--navigation--link(href=item.link)= item.text

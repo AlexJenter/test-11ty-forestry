@@ -1,20 +1,21 @@
 ---
 title: Homepage
-layout: default.pug
 ---
 
-include /base/Paragraph/Paragraph
+extends /layout/default
 
-.max-w-4xl.mx-auto.p-8
-	h1.h1= title
-	p= url_for('/action')
-	p= slug('Whatever you want')
 
-	+Paragraph
-		| What a shitty shit.
+block body
+	.max-w-4xl.mx-auto.p-8
+		h1.h1= title
+		p= url_for('/action')
+		p= slug('Whatever you want')
 
-	+Paragraph({ variant: 'sad' })
-		| This is sad.
+		+Paragraph
+			| What a shitty shit.
 
-	article(data-message)
-	article(data-navigation)
+		+Paragraph({ variant: 'sad' })
+			| This is sad.
+
+		article(data-message)
+		article(data-navigation)

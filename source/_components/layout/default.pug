@@ -1,11 +1,7 @@
+include /all
+
+
 doctype html
-include /global/Header/Header
-include /global/Footer/Footer
-
-mixin c(name, options ={})
-	+#{name}(options)
-		block
-
 
 head
 	meta(charset='UTF-8')
@@ -20,8 +16,7 @@ body
 	+Header
 
 	main.flex-grow
-		p Header:
-		!= content
+		block body
 
 	+Footer
 

@@ -1,4 +1,4 @@
-module.exports = (config) => {
+module.exports = config => {
 	const pug = require('pug')
 	const helpers = require('../source/_helpers')
 
@@ -8,16 +8,16 @@ module.exports = (config) => {
 		compile(str, options) {
 			const render = pug.compile(str, options)
 
-			const renderFunction = function (data) {
+			const renderFunction = function(data) {
 				const augmentedHelpers = {}
 				const augmentedData = {}
-				Object.keys(config.javascriptFunctions).forEach((name) => {
+				Object.keys(config.javascriptFunctions).forEach(name => {
 					const helper = config.javascriptFunctions[name]
 					augmentedHelpers[name] = helper
 				})
-				Object.keys(helpers).forEach((name) => {
+				Object.keys(helpers).forEach(name => {
 					const helper = helpers[name]
-					augmentedHelpers[name] = function () {
+					augmentedHelpers[name] = function() {
 						const args = []
 						for (let i = 0; i < arguments.length; i++) {
 							args.push(arguments[i])

@@ -1,0 +1,15 @@
+extends /layouts/base.pug
+
+append styles
+	link(href=url_for("/styleguide/css/styleguide.css") rel="stylesheet")
+	link(href=url_for("/styleguide/js/vendor/codemirror/codemirror.css") rel="stylesheet")
+
+append beforebody
+	script( src=url_for('/styleguide/js/styleguide.js'))
+
+	header.styleguide_header
+		a.styleguide_header--title(href=url_for('/index.html')) Frontend Prototype
+		if false
+			.styleguide_header--nav
+				a(href=url_for('/components/index.html') class=(_page.url.indexOf('/components/') === 0 ? 'is-active' : '')) Components
+				a(href=url_for('/pages/index.html') class=(_page.url.indexOf('/pages/') === 0 ? 'is-active' : '')) Pages

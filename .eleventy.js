@@ -1,12 +1,15 @@
-module.exports = (config) => {
+module.exports = config => {
 	const BetterPug = require('./plugins/BetterPug')
+	const ErrorOverlay = require('./plugins/eleventy-plugin-error-overlay')
 
 	config.addPlugin(BetterPug)
+	config.addPlugin(ErrorOverlay)
 
 	config.addPassthroughCopy({ 'source/_public': './' })
 
 	config.setBrowserSyncConfig({
-		files: ['dist/**/*'],
+		...config.browserSyncConfig,
+		files: ['build/**/*'],
 		open: true,
 	})
 

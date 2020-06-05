@@ -1,0 +1,18 @@
+extends /layouts/styleguide-base.pug
+
+block body
+	.styleguide_grid
+
+		.styleguide_grid--nav
+			+StyleguideNav
+
+		.styleguide_grid--content
+			h1.styleguide-h1
+				= pageTitle(current_page)
+
+			if _page.data.desc
+				p.styleguide-intro= _page.data.desc
+
+			block content
+			script.
+				styleguide.collectExampleCode();

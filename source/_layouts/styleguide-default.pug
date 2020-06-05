@@ -1,0 +1,13 @@
+extends /layouts/styleguide-base.pug
+
+block body
+	if _page.data.noNavigation
+		block content
+	else
+		.styleguide_grid
+
+			.styleguide_grid--nav
+				+StyleguideNav
+
+			.styleguide_grid--content
+				block content

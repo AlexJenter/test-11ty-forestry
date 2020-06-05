@@ -1,0 +1,33 @@
+
+
+nav.styleguide--nav
+
+	h1.visuallyhidden Styleguide Navigation
+
+	button.styleguide_nav--toggle.js-styleguide--togglenav(type='button') Toggle styleguide navigation
+	a.styleguide_nav--back(href=url_for('/index.html')) Overview
+
+
+	label.visuallyhidden(for='styleguide_nav_filter') Filter styleguide navigation
+	input#styleguide_nav_filter.styleguide_nav--filter.js-styleguide_nav_filter(type='search' placeholder='Filter ...' onfocus='styleguide.filterNav(this, {target: ".styleguide_nav", group: ".styleguide_nav--group", element: ".styleguide_nav--module"})')
+
+	- pageTree = sitemapTree()
+	//- pageTree.docs = sitemapTree().docs
+
+	mixin treeList(tree, level)
+		- level = level || 1
+		each subtree, category in tree
+			li.styleguide_nav--group
+				h2.styleguide_nav--category
+					= (category)
+					button(type='button') Show #{(category)}
+			//-
+				ul.styleguide_nav--modules
+					if subtree.children.length > 0
+						each page in subtree.children
+							li.styleguide_nav--module
+								a(href=page.url)= pageTitle(page)
+					+treeList(subtree, level + 1)
+
+	ol.styleguide_nav
+		+treeList(pageTree)

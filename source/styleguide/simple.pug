@@ -1,0 +1,20 @@
+---
+title: Styleguide
+---
+
+
+extends /layout/default
+
+
+block body
+
+	ul
+		each page in collections.all
+			li
+				dl
+					- pageKeys = 'inputPath fileSlug filePathStem date outputPath url'.split(' ')
+					each key in pageKeys
+						dt= key
+						dd= page[key]
+					dt Title
+					dd= page.data.title

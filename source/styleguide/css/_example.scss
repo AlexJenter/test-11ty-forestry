@@ -1,0 +1,58 @@
+.styleguide-example {
+	@include clearfix;
+	position: relative;
+	background-color: white;
+	border: 10px solid #f2f2f2;
+	min-height: 20px;
+	padding: 20px;
+	margin-top: 20px;
+}
+
+
+.styleguide-code {
+	font-size: 14px;
+	overflow: hidden;
+	white-space: pre;
+	border: 10px solid #f2f2f2;
+	background: #f2f2f2;
+	padding: 10px;
+	border-top: 0;
+	box-sizing: border-box;
+	min-height: 0;
+	max-height: 40em;
+	transition: all 290ms ease-in-out;
+
+	.CodeMirror {
+		background: #f2f2f2;
+		height: auto;
+	}
+	.CodeMirror-scroll {
+		max-height: 400px;
+	}
+	.CodeMirror-focused .CodeMirror-selected { background: #B2D8E7; }
+	.cm-highlightPatterns {
+		background: rgba(#ffcc00, 0.5);
+	}
+}
+
+.styleguide-code.is-new {
+	overflow: hidden;
+	max-height: 0;
+	padding-top: 0;
+	padding-bottom: 0;
+}
+
+
+
+.styleguide-example_section {
+	margin: 2em 0;
+}
+
+.styleguide-codebutton {
+	text-align: right;
+	> button {
+		font-size: 75%;
+		color: #777;
+		margin-top: 10px;
+	}
+}

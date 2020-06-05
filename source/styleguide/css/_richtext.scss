@@ -1,0 +1,42 @@
+.styleguide-richtext {
+	h1 {
+		@extend .styleguide-h1;
+	}
+	h2 {
+		@extend .styleguide-h2;
+	}
+	h3 {
+		@extend .styleguide-h3;
+	}
+	code {
+		font: 80%/1.4 Monaco, Courier;
+		color: #333;
+		padding: 1px 3px;
+		background: rgba(white, 1);
+	}
+	pre > code  {
+		display: block;
+		padding: 1em;
+	}
+	strong, em {
+		font-weight: bold;
+	}
+	pre,
+	p {
+		margin: 1em 0;
+	}
+	ul, ol {
+		margin: 2em 0;
+		> li {
+			display: list-item;
+			list-style: disc;
+			margin-left: 2em;
+		}
+	}
+	ol {
+		> li {
+			display: list-item;
+			list-style: inside;
+		}
+	}
+}

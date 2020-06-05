@@ -1,0 +1,37 @@
+.styleguide_header {
+	padding: 20px 40px;
+	border-bottom: 1px solid rgba(black, 0.5);
+	margin-bottom: 20px;
+	display: flex;
+	align-items: flex-end;
+
+	@include mobile {
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+}
+
+.styleguide_header--title {
+	font-size: 140%;
+	font-weight: bold;
+	margin-right: auto;
+	> img {
+		height: 1.8em;
+		vertical-align: baseline;
+		margin: -.5em .5ex -.5em 0;
+	}
+}
+
+.styleguide_header--nav {
+	a {
+		margin-right: 1em;
+
+		&:last-child {
+			margin-right: 0;
+		}
+
+		&.is-active {
+			font-weight: bold;
+		}
+	}
+}

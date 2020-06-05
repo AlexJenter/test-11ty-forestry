@@ -104,6 +104,8 @@ button { cursor: pointer; }
 /* prettier-ignore */
 .Paragraph { border: 1px solid #ddd; padding: 10px; }
 
+.Paragraph.red { color: red; }
+
 /* stylelint-disable selector-no-id */
 #FlyingFocus { position: absolute; margin: 0; top: -100px; background: transparent; transition-property: left, top, width, height, opacity; transition-timing-function: cubic-bezier(0, 0.2, 0, 1); visibility: hidden; pointer-events: none; display: none; }
 

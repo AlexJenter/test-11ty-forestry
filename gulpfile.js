@@ -37,6 +37,7 @@ gulp.task('watch', () => {
 		'js',
 		{ delay: 150 }
 	)
+	watch(tasks.pugComponents.sources, 'pugComponents')
 	const addWatcher = gulp.watch('source/_components/**/*.new')
 	addWatcher.on('addDir', gulp.series('addComponents'))
 	addWatcher.on('add', gulp.series('addComponents'))
@@ -47,7 +48,7 @@ gulp.task('watch', () => {
 })
 
 function watchLint() {
-	tasks.eslint(['**/*.js'])
+	tasks.eslint(['**/*.js', '!build/**/*.js'])
 	tasks.stylelint(['source/**/*.scss'])
 }
 
@@ -60,7 +61,7 @@ gulp.task('js', gulp.series('jsModules', 'jsConcat'))
 
 gulp.task(
 	'prebuild',
-	gulp.parallel('colors', 'addComponents', 'js') //, 'svg2icon', 'svgsprite', 'jiraTasks')
+	gulp.parallel('colors', 'addComponents', 'js', 'pugComponents') //, 'svg2icon', 'svgsprite', 'jiraTasks')
 )
 gulp.task(
 	'build',

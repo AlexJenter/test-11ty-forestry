@@ -1,0 +1,7 @@
+mixin ExampleSample({ highlight = null } = {})
+
+	.styleguide-example(data-highlight=highlight)
+		!= yield()
+	p.styleguide-codebutton
+		button(onclick='styleguide.showExampleCode(this);' type='button') Show Code
+

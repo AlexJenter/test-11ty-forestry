@@ -1,12 +1,77 @@
 ---
-title: Styleguide
-layout: default.pug
+noNavigation: true
 ---
 
-.max-w-4xl.mx-auto.p-8
-	h1.h1= title
-	p= page.url
-	p= url_for('/action')
 
-	article(data-message)
-	article(data-navigation)
+.styleguide
+
+	h1.visuallyhidden Styleguide
+
+	.styleguide_category_intro_container
+		.styleguide_category_intro
+			h2.styleguide-h2 Patterns
+
+			- pageTree = sitemapTree()
+
+			.styleguide_category_intro--graphic
+				img(src=url_for('/styleguide/img/atom.svg') alt='Patterns')
+			label.visuallyhidden(for='filter-patterns') Patterns
+			input.styleguide_category_intro--filter.js-styleguide_nav_filter(id='filter-patterns' type='search' placeholder='Quick search patterns ...' onfocus='styleguide.filterNav(this, {target: "#nav_patterns", group: ".js-styleguide-group", element: ".js-styleguide-element"})' tabindex=1)
+
+
+			ul#nav_patterns
+			//-
+				each subtree, category in pageTree.components.bootstrap
+					li.js-styleguide-group
+						h3.styleguide-h3= titleize(category)
+						ul
+							each page, index in subtree.descendants
+								li.js-styleguide-element
+									a(href=url_for(page.url))= pageTitle(page)
+
+		.styleguide_category_intro
+			h2.styleguide-h2 Components
+			.styleguide_category_intro--graphic
+				img(src=url_for('/styleguide/img/components.svg') alt='Components')
+			label.visuallyhidden(for='filter-components') Components
+			input.styleguide_category_intro--filter.js-styleguide_nav_filter(id='filter-components' type='search' placeholder='Quick search components ...' onfocus='styleguide.filterNav(this, {target: "#nav_components", group: ".js-styleguide-group", element: ".js-styleguide-element"})' tabindex=1)
+			ul#nav_components
+			//-
+				each subtree, category in pageTree.components
+					unless category == 'bootstrap'
+						li.js-styleguide-group
+							h3.styleguide-h3= titleize(category)
+							ul
+								each page, index in subtree.descendants
+									li.js-styleguide-element
+										a(href=url_for(page.url))= pageTitle(page)
+
+		.styleguide_category_intro
+			h2.styleguide-h2 Pages
+			styleguide_category_intro--graphic
+				img(src=url_for('/styleguide/img/pages.svg') alt='Pages')
+			label.visuallyhidden(for='filter-pages') Pages
+			input.styleguide_category_intro--filter.js-styleguide_nav_filter(id='filter-pages' type='search' placeholder='Quick search pages ...' onfocus='styleguide.filterNav(this, {target: "#nav_pages", group: ".js-styleguide-group", element: ".js-styleguide-element"})' tabindex=1)
+			ul#nav_pages
+				each subtree, category in pageTree
+					li.js-styleguide-group
+						h3.styleguide-h3= category
+					//-
+						ul
+							each page, index in subtree.descendants
+								li.js-styleguide-element
+									a(href=url_for(page.url))= pageTitle(page)
+
+		.styleguide_category_intro
+			h2.styleguide-h2 Docs &amp; Notes
+			.styleguide_category_intro--graphic
+				img(src=url_for('/styleguide/img/docs.svg') alt='Docs &amp; Notes')
+			ul
+			//-
+				each page, index in pageTree.docs.descendants
+					li.js-styleguide-element
+						a(href=url_for(page.url))= pageTitle(page)
+
+			.styleguide-richtext
+				p Use <code>ALT-SHIFT-T</code> to activate the google language switcher (default: arabic).
+

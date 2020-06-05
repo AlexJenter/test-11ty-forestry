@@ -1,0 +1,64 @@
+
+.styleguide-listing {
+	&:after {
+		content: '';
+		display: table;
+		clear: left;
+	}
+
+	[data-styleguide-status] {
+		white-space: nowrap;
+		max-width: 100%;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		font-size: 60%;
+		margin-top: 5px;
+	}
+}
+
+.styleguide-component_link {
+	display: inline-block;
+	vertical-align: top;
+	background-color: #eee;
+	border: 3px solid;
+	margin-right: 5px;
+	margin-bottom: 5px;
+	box-sizing: border-box;
+	position: relative;
+	@include font(bold);
+	font-size: 14px;
+
+	float: left;
+	width: 125px;
+	min-height: 115px;
+	padding: 5px 6px 4px 8px;
+
+	> strong {
+		display: block;
+	}
+	strong > a {
+		text-decoration: none;
+	}
+
+	> a {
+	}
+
+	&.is-component {
+		color: white;
+		border: 0;
+		background-color: #555;
+		min-height: 85px;
+		> a {
+
+
+		}
+	}
+
+
+	.styleguide-id {
+		color: black;
+		font-size: 80%;
+		display: block;
+	}
+
+}

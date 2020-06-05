@@ -1,4 +1,9 @@
 .Paragraph {
 	border: 1px solid #ddd;
 	padding: 10px;
+
+
+	&.red {
+		color: red;
+	}
 }

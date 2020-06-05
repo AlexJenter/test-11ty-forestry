@@ -1,0 +1,5 @@
+mixin StyleguideNav
+	a#styleguide-nav(href=url_for('/styleguide/nav.html') data-root=url_for('/index.html').replace(/index\.html$/,'') data-current=_page.url) Styleguide Navigation
+
+	script.
+		styleguide.fetchNav({useLocalStorage: #{false ? 'true' : 'false'}});

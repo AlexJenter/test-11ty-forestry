@@ -1,0 +1,25 @@
+mixin Example({ title = Example, subtitle = null } = {})
+	- _temp.sampleLevel = _temp.sampleLevel || 1
+
+	.styleguide-sample
+		- _temp.sampleLevel++
+		- yieldContent = yield()
+		if title
+			#{'h'+_temp.sampleLevel}(class=("styleguide-h" + _temp.sampleLevel))= title
+
+		if yieldContent && yieldContent.indexOf('styleguide-example') < 0 && yieldContent.indexOf('styleguide-sample') < 0
+			- var descFinder = /<div class="styleguide-richtext.+<!\-\- end styleguide\-richtext\-\->/;
+			- var desc = descFinder.exec(yieldContent)
+			-
+				if (desc) {
+					desc = desc[0];
+					yieldContent = yieldContent.substr(desc.length);
+				} else {
+					desc = '';
+				}
+			!= desc
+			+ExampleSample
+				!= yieldContent
+		else
+			!= yieldContent
+		- _temp.sampleLevel--

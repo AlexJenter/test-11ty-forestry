@@ -1,6 +1,4 @@
-# 11ty Starter
-
-The goal of this project is to bring together what I believe are most pragmatic and performant frontend frameworks and tools into a cohesive template for making web development wonderful.
+# 11ty Pug Starter
 
 ## Getting Started
 
@@ -16,13 +14,23 @@ This project uses [11ty](https://www.11ty.dev/docs/) for templating and static g
 
 Refer to the [11ty docs](https://www.11ty.dev/docs/) for more information on how to customize 11ty to your liking, it is an incredibly powerful tool!
 
+### Pug
+
+We use Pug as a template language. 11ty's default support has been slightly enhanced: we allow to use filters (available as functions) and helpers that are equally available on a global context.
+
+We don't use 11ty's layout pipeline but rather use Pug's built in functionality here, because it supports stuff we want.
+
+Components are automatically gathered (imported) into `source/_components/all.pug` and this again can be imported into the base layout to make all components available to all pages (that use the layout).
+
+### Gulp
+
+We use Gulp to process most stuff, especially CSS and JS. It's also where 11ty is started.
+
+
 ### Assets
 
-All static assets, like images and fonts, should be placed in `source/_public`, as it is copied as-is into the `dist` directory.
+All static assets, like images and fonts, should be placed in `source/_public`, as it is copied as-is into the `build` directory.
 
-## Scripting
-
-This project uses a combination of tools to make developing dynamic data-driven scripting simple and pleasant.
 
 ### Rollup
 
@@ -32,11 +40,6 @@ For bundling, this project uses [Rollup](https://rollupjs.org/guide/en/). This i
 
 For complex functionality that doesn't require SEO, such as pulling data from an API client side or sending post requests, this project utilitizes [Svelte](https://svelte.dev). Svelte is an exceptional JS framework that makes reactivity simple and predictable.
 
-**Note:** See `source/index.njk` and `source/_scripts/svelte.js` to see how Svelte can be initialized on pages.
-
-## Styling
-
-...
 
 ## Knock Yourself Out!
 

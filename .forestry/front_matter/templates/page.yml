@@ -16,6 +16,3 @@ fields:
     schema:
       format: markdown
   label: Description
-pages:
-- _pages/first-page.md
-- _pages/second-page.md

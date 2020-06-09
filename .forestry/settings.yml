@@ -4,9 +4,6 @@ auto_deploy: false
 admin_path: 
 webhook_url: 
 sections:
-- type: document
-  path: source/_data/home.md
-  label: Home
 - type: heading
   label: Content
 - type: directory

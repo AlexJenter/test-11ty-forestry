@@ -13,6 +13,13 @@ module.exports = config => {
 		open: true,
 	})
 
+	if (process.env.ELEVENTY_ENV == 'staging') {
+		config.setBrowserSyncConfig({
+			...config.browserSyncConfig,
+			host: '0.0.0.0',
+		})
+	}
+
 	config.setDataDeepMerge(true)
 
 	return {

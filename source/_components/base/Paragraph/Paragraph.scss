@@ -2,8 +2,12 @@
 	border: 1px solid #ddd;
 	padding: 10px;
 
-
-	&.red {
+	&.happy {
 		color: red;
+	}
+
+	&.sad {
+		color: white;
+		background: #000;
 	}
 }

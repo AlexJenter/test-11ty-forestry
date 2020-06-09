@@ -5,9 +5,8 @@ admin_path:
 webhook_url: 
 sections:
 - type: document
-  path: source/_data/home.yml
+  path: source/_data/home.md
   label: Home
-  read_only: false
 - type: heading
   label: Content
 - type: directory

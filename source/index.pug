@@ -6,19 +6,25 @@ extends /layout/default
 
 
 block body
-	.max-w-4xl.mx-auto.p-8
-		h1.h1= title
-		p= url_for('/action')
-		p= slug('Whatever you want')
+	h1.h1= title
+	p= url_for('/action')
+	p= slug('Whatever you want')
 
-		+Paragraph
-			| What a shitty shit.
 
-		+Paragraph({variant: 'happy'})
-			| What a shitty shit.
+	+Paragraph
+		| Blog Posts
 
-		+Paragraph({ variant: 'sad' })
-			| This is sad.
+	ul
+		each post in collections.posts
+			li
+				a(href= post.url)= post.data.pageTitle
 
-		article(data-message)
-		article(data-navigation)
+
+	+Paragraph({variant: 'happy'})
+		| What a shitty shit.
+
+	+Paragraph({ variant: 'sad' })
+		| This is sad.
+
+	article(data-message)
+	article(data-navigation)

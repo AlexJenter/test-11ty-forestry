@@ -6,11 +6,12 @@ object:
 Navigation:
   logoLink:
     text: Home
-    link: https://exaple.com/
+    link: https://example.com/
   NavigationItems:
     - text: one
-      link: https://exaple.com/one/
+      link: https://example.com/one/
     - text: two
-      link: https://exaple.com/two/
+      link: https://example.com/two/
     - text: three
-      link: https://exaple.com/three/
+      link: https://example.com/three/
+$

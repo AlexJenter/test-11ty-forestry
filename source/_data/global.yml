@@ -1,4 +1,7 @@
 test: hello
-parent:
-  childA: Ava
-  childB: Johnny
+object:
+  property-A: Ava
+  property-B: Johnny
+array:
+  - one
+  - two

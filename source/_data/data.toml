@@ -1,0 +1,5 @@
+[one Two three]
+foo=1
+bar=2
+
+[*.md]

@@ -1,4 +1,7 @@
 ---
 label: data.toml
 hide_body: true
-fields: []
+fields:
+- name: color
+  type: boolean
+  label: Color

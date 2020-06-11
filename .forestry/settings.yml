@@ -21,6 +21,12 @@ sections:
     templates:
       - post
   - type: directory
+    label: Data
+    path: source/_data
+    match: '*.toml'
+    new_doc_ext: '.toml'
+    create: all
+  - type: directory
     path: _pages
     label: Pages
     create: documents

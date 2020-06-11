@@ -3,10 +3,14 @@ test: hello
 object:
   property-A: Ava
   property-B: Johnny
-array:
-  - text: one
-    link: hppts://exaple.com/one/
-  - text: two
-    link: hppts://exaple.com/two/
-  - text: three
-    link: hppts://exaple.com/three/
+Navigation:
+  logoLink:
+    - text: Home
+      link: https://exaple.com/
+  NavigationItems:
+    - text: one
+      link: https://exaple.com/one/
+    - text: two
+      link: https://exaple.com/two/
+    - text: three
+      link: https://exaple.com/three/

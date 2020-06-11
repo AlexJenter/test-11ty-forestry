@@ -1,7 +1,10 @@
+---
 test: hello
 object:
   property-A: Ava
   property-B: Johnny
 array:
-  - one
-  - two
+- three
+- one
+- two
+- four

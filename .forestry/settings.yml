@@ -7,7 +7,6 @@ sections:
 - type: document
   path: source/_data/global.yml
   label: Global
-  match: "**/*"
 - type: heading
   label: Content
 - type: directory

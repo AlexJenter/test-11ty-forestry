@@ -5,8 +5,8 @@ object:
   property-B: Johnny
 Navigation:
   logoLink:
-    - text: Home
-      link: https://exaple.com/
+    text: Home
+    link: https://exaple.com/
   NavigationItems:
     - text: one
       link: https://exaple.com/one/
